@@ -60,6 +60,10 @@
 		created by the "resolve" target above, a pathelement of the 'classes.dir' property,
 		and a second pathelement of the 'classes.test.dir' property.
 		-->
+		<classpath>
+			<fileset refid="test.classpath"/>
+			<pathelement path="${classes.dir}"/>
+		</classpath>
 	  </javac>
 	</target>
 
@@ -71,6 +75,10 @@
             created by the "resolve" target above, a pathelement of the 'classes.dir' property,
             and a second pathelement of the 'classes.test.dir' property.
             -->
+		<classpath>
+			<fileset refid="test.classpath"/>
+			<pathelement path="${classes.dir}"/>
+		  </classpath>
             <formatter type="plain" />        
             <batchtest fork="yes" todir="${reports.dir}">
               <fileset dir="${src.test.dir}">
@@ -83,7 +91,7 @@
 	<!--
 	TODO: Make this target depend on the 'test' target.
 	-->
-	<target name="jar">
+	<target name="jar" depends="test">
           <ivy:cachefileset setid="hello.runclasspath" conf="compile" />
           <jar destfile="${jar.file}" basedir="${classes.dir}">
             <manifest>
