@@ -1,6 +1,26 @@
 group 'edu.depaul.cdm.se441'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'java'
+
+repositories{
+	mavenCentral()
+}
+
+dependencies{
+	
+}
+
+jar{
+	baseName = project.name + '-all'
+	from{
+		configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+	}
+	manifest{
+		attributes 'Main-Class': 'src.main.java.hello'
+	}
+}
+
 /*
 TODO: Define the dependencies for both the compile and test
 scopes. We need the following dependencies:
