@@ -6,3 +6,9 @@ hello-world/target
 tools/build
 tools/ivy
 tools/src
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
