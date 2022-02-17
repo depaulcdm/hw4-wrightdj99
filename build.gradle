@@ -19,6 +19,6 @@ jar{
 			}.collect { zipTree(it) }
 	}
 	manifest{
-		attributes('Main-Class': 'hw4-wrightdj99.hello-world.src.main.java.hello.HelloWorld')
+		attributes('Main-Class': 'hello.HelloWorld')
 	}
 }
