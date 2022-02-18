@@ -24,6 +24,7 @@ The first argument is the Alt-text for the image. The second argument is the pat
 - [5 pts] A screen capture showing the version of Maven that you installed and its install directory.
 - ![Screen Capture #3](images/mvnversion.png)
 - [10 pts] A screen capture showing a successful build using the Maven script.
+- <img width="431" alt="image" src="https://user-images.githubusercontent.com/60994655/154598560-3c8eea1c-ad8b-4c73-a5ed-666eb327b209.png">
 - [5 pts] A screen capture showing a successful execution of the JAR file created from the Maven build.
 - <img width="433" alt="image" src="https://user-images.githubusercontent.com/60994655/154598457-bd365001-cd97-4b4a-bd16-38c868703f8d.png">
 - [10 pts] Links to the complete and correct [hello-world/pom.xml](hello-world/pom.xml) file.
